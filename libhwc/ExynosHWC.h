@@ -29,8 +29,6 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
-#include <linux/s3c-fb.h>
-
 #include <EGL/egl.h>
 
 #define HWC_REMOVE_DEPRECATED_VERSIONS 1
@@ -303,7 +301,7 @@ struct exynos5_hwc_composer_device_1_t {
     uint64_t LastModeSwitchTimeStamp;
     int invalidateStatus;
     int needInvalidate;
-    int totPixels;
+    uint32_t totPixels;
     int setCallCnt;
     pthread_t   vsync_stat_thread;
     int vsyn_event_cnt;
